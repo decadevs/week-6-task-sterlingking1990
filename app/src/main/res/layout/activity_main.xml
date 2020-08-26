@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#F8F8F8"
+    android:elevation="2dp"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/background_style"
+        app:layout_constraintBottom_toTopOf="@id/etName"
+        android:id="@+id/vTop"/>
+
+
+    <EditText
+        android:background="@drawable/input_style"
+        android:id="@+id/etEmail"
+        android:layout_width="392dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/enter_your_email"
+        android:padding="10dp"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_email"
+        android:elevation="4dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+    <EditText
+        android:background="@drawable/input_style"
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/enter_your_name"
+        android:elevation="4dp"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:drawableStart="@drawable/ic_name"
+        android:drawablePadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <EditText
+        android:background="@drawable/input_style"
+        android:id="@+id/etPhone"
+        android:layout_width="392dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/enter_your_phone_number"
+        android:textSize="20sp"
+        android:elevation="4dp"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <Button
+        android:id="@+id/btnDisplayInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/display_info"
+        android:clickable="true"
+        android:textColor="@color/colorWhite"
+        android:defaultFocusHighlightEnabled="true"
+        android:background="@drawable/button_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spSex"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spSex"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:theme="@style/Spinner"
+        android:layout_width="399dp"
+        android:layout_height="57dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:text="@string/signature"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
